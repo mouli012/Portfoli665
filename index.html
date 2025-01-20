@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-Mouli</title>
+    <link rel="icon" href="https://i.pinimg.com/originals/69/21/ed/6921eda13fc530902084fba4a488ff0d.jpg">
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+            gap: 10px;
+            }
+
+            .item {
+            flex: 1 1 calc(33.333% - 10px); /* Three items per row */
+            }
+
+            /* Mobile View */
+            @media (max-width: 480px) {
+            .item {
+                flex: 1 1 calc(100% - 10px); /* One item per row */
+            }
+            }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2px;
+            padding: 0;
+            background: #232222;
+            color: #ffffff;
+            box-sizing: border-box;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem;
+            background-color: #1f1f1f;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        header button {
+            margin-top: 1rem;
+            padding: 0.8rem 1.5rem;
+            background-color: #5e6368;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        header button:hover {
+            background-color: #15181c;
+        }
+
+        header {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #1c1e24;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    .project-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 30px;
+      background-color: rgb(34, 32, 32);
+    }
+
+    .project-card {
+      background-color: #20232a;
+      border-radius: 10px;
+      overflow: hidden;
+      max-width: 340px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 20px;
+    }
+
+    .project-content h2 {
+      font-size: 1.4em;
+      margin-bottom: 10px;
+      color: #61dafb;
+    }
+
+    .project-content p {
+      font-size: 0.95em;
+      line-height: 1.5;
+      color: #d1d1d1;
+    }
+
+    .project-links {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .btn {
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 0.9em;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #2575fc, #6a11cb);
+    }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #000000;
+            margin-top: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            /* ackground-image:url(); */
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            /* background-color: #38383b; */
+            background-color: rgba(0, 0, 0, 0.5); /* Change background opacity on hover */
+            border-color: rgba(134, 134, 147, 0.7); 
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: hsl(0, 1%, 31%);
+            background-color: transparent;
+        }
+
+        .social-links a img {
+            width: 20px;
+            height: 20px;
+        }
+
+        footer p {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #bbbbbb;
+        }
+        .name {
+            width: 20%;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       
+        .butt1 {
+            width: 30%;
+            height: 30px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            border-radius: 4px;
+
+        }
+        .butt2 {
+            width: 30%;
+            height: 30px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            
+        }
+        .button-link {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ffd700;
+        color: rgb(29, 26, 26);
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .button-link:hover {
+        background-color: #f2ff04;
+        transform: scale(1.05);
+
+    }
+    .body {
+        background-color: #000000;
+        color: white;
+        font-family: sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 100vh;
+          
+    }
+
+      
+        .skills {
+            padding: 40px 20px;
+            background-color: #0f0e0e;
+            text-align: center;
+        }
+
+        .skills h2 {
+            font-size: 2rem;
+            color: #fffb00;
+            margin-bottom: 20px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .skill-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-card img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+        }
+
+        .skill-card h3 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .skill-card p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about p {
+                font-size: 1rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+        .links {
+            padding: 70px;
+        }
+       
+        .hero {
+            background: linear-gradient(to right, #000000);
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .hero-content .name-highlight {
+            color: #ff4d16;
+        }
+        .about {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #0f0d0d;
+            color: #555;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            color: #ecff1d;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #ffffff;
+        }
+        
+       
+
+        @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {    
+            background-position: 0% 50%;
+        }
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+           
+            justify-content: space-between; /* Ensures proper spacing */
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            position: fixed; /* Fixes the navbar to the top */
+            top: 0;
+            left: 0;
+            width: 100%; /* Spans the full width of the page */
+            z-index: 1000; /* Ensures it stays on top of other elements */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+        }
+
+    .logo {
+        font-size: 2rem;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        font-weight: bold;
+        background: linear-gradient(90deg, #f1f0f1, #fff701,rgb(255, 255, 255));
+        background-size: 900% 900%;
+        color: transparent; /* Fallback */
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradient 2s ease infinite;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .buttons {
+      margin-left: auto; /* Pushes the buttons to the right */
+      display: flex;
+      gap: 10px;
+      padding-right: 50px;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      color: black;
+      background-color: #d3d3d3; /* Light grey background */
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin-left: 10px; /* Space between buttons */
+      font-size: 16px;
+      font-weight: bold;
+      border: 2px solid black;
+    }
+
+    .buttons a:hover {
+      background-color: #fffc33; /* Darker grey on hover */
+    }
+    .background-letters {
+            font-size: 15rem; /* Large background letters */
+            color: rgba(255, 255, 255, 0.042); /* Light opacity for background letters */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            pointer-events: none;
+            user-select: none;
+            
+    }
+    </style>
+</head>
+
+<body>
+   
+    </div> -->
+    <div class="navbar" style="background-color:black ;">
+        <div class="logo">SAKALABHAKTULA SAIMOULI</div>
+        <div class="buttons">
+          <a href="#c4">About</a>
+          <a href="#c5">Projects</a>
+          <a href="#c6">Profiles</a>
+        </div>
+      </div>
+    </nav>
+    <header class="hero">
+        <div class="hero-content">
+            <div class="background-letters">ENGINEER</div>
+            <h1>Hello, I'm <span class="name-highlight">Saimouli Sakalabhaktula</span></h1>
+            <p class="tagline">Data Structures & Algorithms Enthusiast</p>
+            <p class="passion">Passionate about solving problems and building efficient software</p>
+            <a href="https://apricot-janice-64.tiiny.site" class="button-link">Download CV</a>
+        </div>
+    </header>
+
+    <section class="about">
+        <h2 id="c4">About Me</h2>
+        <p>
+            I'm Sakalabhaktula Saimouli, a BTech student with Good in <strong style="color: yellow;">Data Structures</strong> and
+            <strong style="color: yellow;">Algorithms</strong>. As a core contributor in the Google Developer Group (GDG), I have solved
+            over <span class="highlight">450+ problems</span> on LeetCode, sharpening my problem-solving skills. I am
+            passionate about becoming a skilled <em style="color: yellow;">Software Engineer</em>.
+        </p>
+    </section>
+            </div>
+        <section class="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <img src="https://img.icons8.com/color/96/000000/python.png" alt="Python">
+                    <h3>Python</h3>
+                    <p>Efficient scripting and automation.</p>
+                </div>
+    
+                <!-- Java Card -->
+                <div class="skill-card">
+                    <img src="https://img.icons8.com/color/96/000000/java-coffee-cup-logo.png" alt="Java">
+                    <h3>Java</h3>
+                    <p>Building robust backend systems.</p>
+                </div>
+    
+                <!-- SQL Card -->
+                <div class="skill-card">
+                    <img src="https://img.icons8.com/color/96/000000/sql.png" alt="SQL">
+                    <h3>SQL</h3>
+                    <p>Database design and querying.</p>
+                </div>
+    
+                <!-- JavaScript Card -->
+                <div class="skill-card">
+                    <img src="https://img.icons8.com/color/96/000000/javascript.png" alt="JavaScript">
+                    <h3>JavaScript</h3>
+                    <p>Interactive web development.</p>
+                </div>
+            </div>
+        </section>
+        
+       
+    <header id="c5">
+        <h1 style="color: yellow;">My Web Projects</h1>
+    </header>
+    <section class="project-section">
+        <div class="project-card">
+          <img src="https://www.shutterstock.com/image-photo/using-tablet-pc-consultant-between-600nw-2260960137.jpg" alt="Project 1" class="project-image">
+          <div class="project-content">
+            <h2>Online Conslulting website</h2>
+            <p>Developed a front-end web application using HTML, CSS, and JavaScript.
+                • Enabled users to search for local service providers such as hospitals, lawyers, mechanics, plumbers, and doctors.
+                <!-- • Integrated virtual consultation features for real-time communication with professionals.</p> -->
+            <div class="project-links">
+              <a href="https://github.com/mouli012" class="btn">View on GitHub</a>
+              <!-- <a href="" class="btn">Live Demo</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="https://studentprojectguide.com/wp-content/uploads/2017/11/Online-Shopping-System.jpeg" alt="Project 2" class="project-image">
+          <div class="project-content">
+            <h2>Online Shopping System</h2>
+            <p>• Implemented Security Measures: Utilized access specifiers to enhance security and control data access
+                within classes.and desgin a Structured Class Design: created modular classes including customer,cart,products etc.</p> 
+            <div class="project-links">
+              <a href="https://github.com/mouli012" class="btn">View on GitHub</a>
+              <!-- <a href="" class="btn">Live Demo</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="https://slidechef.net/wp-content/uploads/2021/12/Money-Heist-Theme-Template.jpg" alt="Project 3" class="project-image">
+          <div class="project-content">
+            <h2>Netflix Prototype</h2>
+            <p>• Implemented a user-friendly interface with a comprehensive search bar to find movies and TV shows. 
+                • You can also check the movie cast.
+                • and also find the Movie ratings and all details.</p>
+            <div class="project-links">
+              <a href="https://github.com/mouli012" class="btn">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="links" style="background-image: url(https://t3.ftcdn.net/jpg/10/88/02/66/360_F_1088026648_5XB7QzQj4c3LmJE9nPkdEXOKQj3ISRJe.jpg);">
+        <div class="social-links">              <!-- <a href="https://mouli012.github.io/Netflix_theme_project/" class="btn">Live Demo</a> -->
+
+            <!-- <div> <h4 style="color: rgb(220, 92, 12);">Connect with me on scoial media coding profiles</h4> -->
+                <h4 id="c6" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">PROFILES</h4>
+            <a href="https://leetcode.com/u/mouli_12/" target="_blank">
+                <img src="data:image/png;base64,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" alt="Leetcode" width="150" />Leetcode
+            </a>
+            <a href="https://www.linkedin.com/in/sakalabhaktula-sai-mouli-0284b22a7/" target="_blank">
+                <img src=data:image/png;base64,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 alt="LinkedIn"> LinkedIn
+            </a>
+            <a href="https://github.com/mouli012" target="_blank">
+                <img src="data:image/png;base64,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" alt="LeetCode"> Github
+            </a>
+            <a href="https://www.hackerrank.com/profile/23A35A4320" target="_blank">
+                <img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAXVBMVEUNFB4A6mT///8AAAANEh4A62QFDhoNABkACxgNABc5PUMjKC8HmkcA72YMAxwAABKwsbK/wMIFvlXr7OwAAAgAABQMBR0YHSaLjI+Ymp0JdTqsra68vb729/fq6+v0ofD5AAABAklEQVR4nO3cuw6CMBiAUbXeFbzjnfd/TBdd6GIag9Ccs/IP/dKJJu1gAAAAAAAAAAAAAAAAAAAAANCecZq2ljcNm6ZjPBUNncL0860sqzJBNWsp8HwYNV2ixHCNhur5J/BWDFNM1u0kzpfR2kfbEBXu4qnVexNn62KSotgv+lOYtIcKFSpUqFChQoUKFSpUqFChQoUKFSpUqPD/hfcQeeRV+KwPDfUzr8LvKFSoUKFChQoVKlSoUKFChX0vzP8fP/9zmvzP2hQqVKhQoUKFChUqVKhQoUKFChUqVKhQYWJhp+/j5/+mQv7vYvxCx982AQAAAAAAAAAAAAAAAAAAAHrtBfbJYbP19NC0AAAAAElFTkSuQmCC" alt="Google Logo" width="150" />Hacker Rank
+            </a>
+            
+           <a href="https://www.geeksforgeeks.org/user/saimoucvo6/">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLGnMqhnl05Dsn2sn0kQoq3Ch2TP9ebmmJsA&s" alt="GFG" width="200">Geek For Geeks</a>
+        </div>
+        <p style="display: flex; align-items: center;justify-content: center; "> Desgined by SAIMOULI | &copy; 2024 </p>
+    </section>
+</body>
+</html>
