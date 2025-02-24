@@ -158,11 +158,13 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
+            flex-wrap: wrap;
             padding: 0.8rem 1.5rem;
             /* background-color: #38383b; */
             background-color: rgba(0, 0, 0, 0.5); /* Change background opacity on hover */
             border-color: rgba(134, 134, 147, 0.7); 
             color: #ffffff;
+            flex-wrap: nowrap;
             text-decoration: none;
             border-radius: 5px;
             font-size: 1rem;
@@ -320,7 +322,17 @@
         .links {
             padding: 70px;
         }
-       
+        /* .abouts a {
+            
+            color: rgb(0, 0, 0);
+            background-color: rgb(175, 173, 189);
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        } */
         .hero {
             background: linear-gradient(to right, #000000);
             color: #fff;
@@ -420,18 +432,22 @@
       font-size: 16px;
       font-weight: bold;
       border: 2px solid black;
+      transition: 0.5s all ease;
     }
 
     .buttons a:hover {
-      background-color: #fffc33; /* Darker grey on hover */
+      background-color: #687961; 
     }
+    
     .background-letters {
             font-size: 15rem; /* Large background letters */
             color: rgba(255, 255, 255, 0.042); /* Light opacity for background letters */
             position: absolute;
             top: 50%;
+            
             left: 50%;
             transform: translate(-50%, -50%);
+            flex-wrap: wrap;
             z-index: 1;
             pointer-events: none;
             user-select: none;
@@ -518,7 +534,6 @@
                 <!-- • Integrated virtual consultation features for real-time communication with professionals.</p> -->
             <div class="project-links">
               <a href="https://github.com/mouli012" class="btn">View on GitHub</a>
-              <!-- <a href="" class="btn">Live Demo</a> -->
             </div>
           </div>
         </div>
@@ -530,7 +545,6 @@
                 within classes.and desgin a Structured Class Design: created modular classes including customer,cart,products etc.</p> 
             <div class="project-links">
               <a href="https://github.com/mouli012" class="btn">View on GitHub</a>
-              <!-- <a href="" class="btn">Live Demo</a> -->
             </div>
           </div>
         </div>
@@ -543,14 +557,14 @@
                 • and also find the Movie ratings and all details.</p>
             <div class="project-links">
               <a href="https://github.com/mouli012" class="btn">View on GitHub</a>
+              <a href="https://mouli012.github.io/movie-castings/" class="btn">Live Demo</a>
             </div>
           </div>
         </div>
     </section>
 
     <section class="links" style="background-image: url(https://t3.ftcdn.net/jpg/10/88/02/66/360_F_1088026648_5XB7QzQj4c3LmJE9nPkdEXOKQj3ISRJe.jpg);">
-        <div class="social-links">              <!-- <a href="https://mouli012.github.io/Netflix_theme_project/" class="btn">Live Demo</a> -->
-
+        <div class="social-links">
             <!-- <div> <h4 style="color: rgb(220, 92, 12);">Connect with me on scoial media coding profiles</h4> -->
                 <h4 id="c6" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">PROFILES</h4>
             <a href="https://leetcode.com/u/mouli_12/" target="_blank">
